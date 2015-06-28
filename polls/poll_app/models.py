@@ -11,7 +11,7 @@ class Question(models.Model):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
     def __unicode__(self) :
-    	return self.question_text
+    	return self.question_text + "::" + self.pub_date
 
 
 class Choice(models.Model):
